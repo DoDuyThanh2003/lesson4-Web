@@ -1,0 +1,61 @@
+@mixin centerStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+}
+@mixin accountStyle {
+    width: 77px;
+    height: 40px;
+    border: none;
+}
+@mixin gapStyle {
+    display: flex;
+    flex-direction: column;
+}
+@mixin betweenStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin manage_head{
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+    @include betweenStyle();
+    gap: 25px;
+    &-icon {
+        width: 65px;
+        height: 56px;
+    }
+    &-title {
+        text-align: center;
+        font-size: 28px;
+        color: $d_grey-color;
+        font-weight: bold;
+    }
+}
+@mixin manage_text {
+    width: 80%;
+    @include betweenStyle();
+    margin: 0 auto;
+    font-size: 14px;
+    color: $grey-color;
+}
+@mixin statistical {
+    display: flex;
+    gap: 16px;
+    img{
+        width: 48px;
+        height: 48px;
+    }
+    &__text{
+        p{
+            font-size: 28px;
+            color: $d_grey-color;
+        }
+        span{
+            color: $grey-color;
+        }
+    }
+}

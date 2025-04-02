@@ -1,0 +1,294 @@
+@import 'vadiables.scss';
+@import 'mixin.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 84px;
+    width: 100%;
+    display: flex;
+}
+
+.header__logo {
+    width: 20%;
+
+    &-img {
+        @include centerStyle();
+    }
+}
+
+.header__navigation {
+    width: 60%;
+
+    &-nav {
+        list-style: none;
+        @include centerStyle();
+        gap: 50px;
+
+    }
+
+    &-nav a {
+        text-decoration: none;
+        color: $black-color;
+    }
+}
+
+.header__account {
+    width: 20%;
+    gap: 20px;
+    @include centerStyle();
+
+    &-login {
+        @include accountStyle();
+        color: $green-color;
+        background-color: transparent;
+    }
+
+    &-signup {
+        color: $white-color;
+        background-color: $green-color;
+        border-radius: 10px;
+        @include accountStyle();
+    }
+}
+
+.content {
+    width: 100%;
+}
+
+.content__slider {
+    background-color: aqua;
+    height: 600px;
+}
+
+.content__ourClient {
+    width: 80%;
+    margin: 0 auto;
+    @include gapStyle();
+    gap: 20px;
+
+    &-head {
+        @include centerStyle();
+        height: 44px;
+        font-size: 36px;
+        color: $d_grey-color;
+    }
+
+    &-content {
+        @include centerStyle();
+        color: $grey-color;
+    }
+
+    .content__ourClient__logo {
+        width: 85%;
+        margin: 0 auto;
+        height: 98px;
+        align-items: center;
+
+        &-item {
+            @include betweenStyle();
+            height: 100%;
+
+            &img {
+                height: 48px;
+                width: 48px;
+            }
+        }
+    }
+}
+
+.manage {
+    width: 100%;
+    @include gapStyle();
+    gap: 20px;
+
+    .manage__font {
+        @include gapStyle();
+        gap: 5px;
+
+        &-max {
+            width: 40%;
+            margin: 0 auto;
+            color: $d_grey-color;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        &-min {
+            color: $grey-color;
+            text-align: center;
+        }
+    }
+
+    .manage__content {
+        width: 100%;
+        height: 280px;
+        display: flex;
+        justify-content: space-evenly;
+
+        .manage__content__member {
+            width: 15%;
+            box-shadow: 0 10px 10px;
+            @include gapStyle();
+            gap: 20px;
+
+            .manage__content__member_head {
+                @include manage_head();
+            }
+
+            &-text {
+                @include manage_text();
+            }
+        }
+
+        .manage__content__national {
+            width: 15%;
+            box-shadow: 0 10px 10px;
+            @include gapStyle();
+            gap: 20px;
+
+            .manage__content__national_head {
+                @include manage_head();
+            }
+
+            &-text {
+                @include manage_text();
+            }
+        }
+
+        .manage__content__groups {
+            width: 15%;
+            box-shadow: 0 5px 5px;
+            @include gapStyle();
+            gap: 20px;
+
+            .manage__content__groups_head {
+                @include manage_head();
+            }
+
+            &-text {
+                @include manage_text();
+            }
+        }
+    }
+}
+
+.product {
+    width: 100%;
+    @include gapStyle();
+    gap: 48px;
+
+    &__account {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+
+        &__logo {
+            width: 31%;
+        }
+
+        &__conten {
+            @include gapStyle();
+            gap: 20px;
+            width: 50%;
+            margin: auto 0;
+
+            &-text {
+                width: 70%;
+                @include gapStyle();
+                gap: 20px;
+
+                .product_header {
+                    p {
+                        font-size: 36px;
+                        color: $d_grey-color;
+                    }
+                }
+
+                .product_body {
+                    font-size: 14px;
+                    color: $grey-color;
+                }
+            }
+
+            &-btn {
+                width: 60%;
+
+                button {
+                    background-color: $green-color;
+                    color: $white-color;
+                    width: 151px;
+                    height: 52px;
+                    border-radius: 10px;
+                    border: none;
+                }
+
+            }
+        }
+    }
+
+    &__statistical {
+        width: 100%;
+        display: flex;
+        background-color: $silver-color;
+        height: 288px;
+
+        .statistical_content {
+            @include gapStyle();
+            width: 30%;
+            gap: 8px;
+
+            &__title {
+                p {
+                    font-size: 36px;
+
+                    span {
+                        color: $green-color;
+                        display: block;
+                    }
+                }
+            }
+
+            &__content {
+                p {
+                    color: $grey900-color;
+                }
+            }
+        }
+
+        .statistical_logo {
+            @include gapStyle();
+            gap: 40px;
+            &__memberclub {
+                display: flex;
+                gap: 30px;
+
+                .statistical__member {
+                    @include statistical();
+                }
+
+                .statistical__club {
+                    @include statistical();
+                }
+            }
+            &__payement{
+                display: flex;
+                gap: 30px;
+
+                .statistical__event {
+                    @include statistical();
+                }
+
+                .statistical__pay {
+                    @include statistical();
+                }
+            }
+        }
+
+    }
+}
