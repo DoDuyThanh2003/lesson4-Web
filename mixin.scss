@@ -59,3 +59,105 @@
         }
     }
 }
+@mixin fontSize36{
+    font-size: 36px;
+    color: $d_grey-color;
+}
+@mixin marketing {
+    width: 25%;
+    position: relative;
+
+    &__img {
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__content {
+        width: 70%;
+        background-color: $silver-color;
+        @include gapStyle();
+        gap: 16px;
+        padding: 16px 0;
+        border-radius: 15px;
+        position: absolute;
+        top: 100%; // Đưa overlay vào giữa theo chiều dọc
+        left: 50%; // Đưa overlay vào giữa theo chiều ngang
+        transform: translate(-50%, -50%); // Canh giữa chính xác              
+        &-title {
+            width: 70%;
+            font-size: 20px;
+            color: $grey-color;
+            text-align: center;
+            margin: 0 auto;
+        }
+        &-next {
+            a {
+                width: 100%;
+                text-decoration: none;
+                color: $green-color;
+                font-size: 20px;
+                @include centerStyle();
+            }
+        }
+    }
+}
+@mixin footerText{
+    @include gapStyle();
+    gap: 24px;
+    width: 25%;
+
+    &__header {
+        font-size: 20px;
+    }
+
+    &__content {
+        @include gapStyle();
+        gap: 12px;
+
+        a {
+            text-decoration: none;
+            color: $white-color;
+        }
+
+    }
+}
+@mixin slider {
+    width: 100%;
+    display: flex;
+    gap: 104px;
+    justify-content: center;
+    padding: 50px 0;
+    &__left{
+        width: 30%;
+        @include gapStyle();
+        gap: 32px;
+        height: 70%;
+        margin: auto 0;
+        .left__title {
+            @include gapStyle();
+            gap: 16px;
+            width: 100%; 
+            &-head {
+                font-size: 64px;
+                span{
+                    color: $green-color;
+                }
+            }
+            &-content {
+                color: $grey-color;
+            }
+        }
+        .left__btn{
+            button {
+                background-color: $green-color;
+                color: $white-color;
+                width: 50%;
+                border-radius: 10px;
+                border: none;
+                padding: 15px 0;
+            }
+        }
+    }
+}
